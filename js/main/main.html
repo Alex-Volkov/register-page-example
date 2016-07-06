@@ -1,0 +1,94 @@
+<header>
+    <i class="icon logo"></i>
+</header>
+<main>
+    <nav>
+        <div class="col secure-block">
+            <i class="icon shield"></i>
+            <i class="icon fees"></i>
+            <p>secure investing made</p>
+            <p>simple and accessible</p>
+        </div>
+        <div class="col lock-block">
+            <i class="icon lock"></i>
+            <p>Average LTV for secured loans</p>
+            <p>28.45%</p>
+        </div>
+        <div class="col calendar-block">
+            <i class="icon calendar"></i>
+            <p>Loan terms as little as</p>
+            <p>7 days</p>
+        </div>
+        <div class="col percent-block">
+            <i class="icon percent"></i>
+            <p>Earn up ti</p>
+            <p>12% fixed p.a.</p>
+        </div>
+    </nav>
+    <section>
+        <aside>
+            <p>Viventor is a peer-to-peer lending market- place connection lending companies and investors from all
+                over Europe</p>
+            <p>On Viventor, you can directly invest in a wide range of different loans, and earn as much as 12%
+                return in a completely secure way.</p>
+            <p>Viventor platform ensures complete trans- parency and control, remarkable returns</p>
+            <figure>
+                <span class="track">Track</span>
+                <span class="register">Register</span>
+                <span class="select">Select & Invest</span>
+                <span class="receive">Receive returns</span>
+            </figure>
+        </aside>
+        <form name="register" ng-submit="ctrl.submit()" novalidate
+              ng-class="{'check-fields':ctrl.checkFields, 'can-be-submitted':ctrl.canBeSubmitted}">
+            <h3>
+                registro
+                <div class="form-invalid-message">
+                    The fields marked with red are required, please fill them
+                </div>
+                <div class="form-valid-message">
+                    All required fields are set, form can be submitted
+                </div>
+            </h3>
+
+            <placeholder field-data="ctrl.fields.email" on-validate="ctrl.onMailValidate(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.pass" on-validate="ctrl.onPassValidate(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.passRepeat" on-validate="ctrl.onPassValidate(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.name" on-validate="ctrl.onNamesValidation(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.secondName" on-validate="ctrl.onNamesValidation(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.dni" on-validate="ctrl.onDniValidation(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.phone" on-validate="ctrl.onPhoneValidation(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.address" on-validate="ctrl.onNamesValidation(data)"></placeholder>
+            <placeholder field-data="ctrl.fields.city"></placeholder>
+            <select-component field-data="ctrl.fields.country"></select-component>
+            <select-component field-data="ctrl.fields.language"></select-component>
+            <div class="radio-group">
+                <div class="form-control pull-left">
+                    <input type="radio" name="account" value="private" id="private" ng-click="ctrl.accountSelect()"
+                           ng-class="{'selected': ctrl.fields.account.fieldValue == 'private'}"
+                           ng-model="ctrl.fields.account.fieldValue">
+                    <label for="private">Cuenta Privada</label>
+
+                </div>
+                <div class="form-control pull-left">
+                    <input type="radio" name="account" value="business" id="business" ng-click="ctrl.accountSelect()"
+                           ng-class="{'selected': ctrl.fields.account.fieldValue == 'business'}"
+                           ng-model="ctrl.fields.account.fieldValue">
+                    <label for="business">Cuenta de Empresa</label>
+                </div>
+            </div>
+            <hr>
+            <div class="form-control accept-block">
+                <input type="checkbox" required
+                       ng-model="ctrl.fields.accepted.fieldValue"
+                       ng-class="{'selected': ctrl.fields.accepted.fieldValue}"
+                       ng-change="ctrl.onCbChange()"
+                       id="accepted" name="accepted">
+                <label for="accepted" ng-class="{invalid:!ctrl.fields.accepted.fieldValue && ctrl.checkFields}">
+                    Acepto los Terminos y Condiciones y confirmo que la informacion proprcionada es
+                    verdadera <span class="asterisk">*</span></label>
+            </div>
+            <button type="submit">registrate</button>
+        </form>
+    </section>
+</main>

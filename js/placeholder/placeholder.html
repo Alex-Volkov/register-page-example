@@ -1,0 +1,24 @@
+<div class="form-control">
+    <span class="placeholder" ng-click="$ctrl.spanHandler()"
+          ng-class="{'placeholder-clicked':$ctrl.placeholderClicked,
+          'placeholder-up': $ctrl.fieldData.placeholderUp}"
+    >
+        {{$ctrl.fieldData.caption}}
+        <span class="asterisk" ng-if="$ctrl.fieldData.required">*</span>
+    </span>
+    <input type="{{$ctrl.fieldData.type}}"
+           name="{{$ctrl.fieldData.name}}"
+           ng-click="$ctrl.debug()"
+           ng-blur="$ctrl.onBlur($event)"
+           ng-model="$ctrl.fieldValue"
+           ng-change="$ctrl.onChange(this)"
+           ng-required="{{$ctrl.fieldData.required}}"
+           ng-model-options="{'allowInvalid':true}"
+           ng-class="{'ready-for-validation':$ctrl.readyForValidation,
+            'not-equal': $ctrl.fieldData.notEqual, 'not-valid': !$ctrl.fieldData.isValid}"
+    >
+    <span class="message">
+        {{$ctrl.fieldData.errorMessage}}
+    </span>
+
+</div>

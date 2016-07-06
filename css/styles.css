@@ -1,0 +1,457 @@
+@font-face {
+    font-family: "Futura std";
+    src: url('futura.otf');
+}
+
+textarea, input, button, select {
+    outline: none;
+}
+
+html {
+    font-family: Futura std, sans-serif;
+    background-color: #51504e;
+}
+
+.bg {
+    opacity: .3;
+    /*opacity: 0;*/
+    position: absolute;
+}
+
+.icon {
+    background: url('../images/sprite.png');
+    display: inline-block;
+}
+
+header {
+    background-color: #171c20;
+    padding: 10px 0 19px 73px;
+}
+
+.logo {
+    width: 266px;
+    height: 50px;
+    background-position: -738px -40px;
+}
+
+main {
+    width: 980px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.col {
+    float: left;
+    box-sizing: border-box;
+}
+
+.col-4 {
+    width: 25%;
+}
+
+/* nav */
+nav {
+    padding: 45px 0;
+    border-bottom: 1px solid #fff;
+}
+
+nav .col {
+    text-align: center;
+    color: #fff;
+}
+
+nav:after {
+    visibility: hidden;
+    content: ' ';
+    display: block;
+    clear: both;
+    height: 0;
+
+}
+
+/*secure block*/
+.secure-block {
+    width: 254px;
+    font-size: 1.3rem;
+    margin-right: 100px;
+}
+
+.secure-block p {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.secure-block .icon {
+    margin: 0 2px;
+}
+
+.shield {
+    width: 82px;
+    height: 82px;
+    background-position: -35px -38px;
+}
+
+.fees {
+    width: 82px;
+    height: 82px;
+    background-position: -150px -38px;
+}
+
+/* lock block */
+.lock-block {
+    margin-right: 76px;
+}
+
+.lock-block p:nth-child(2) {
+    padding-top: .5rem;
+    font-size: .9rem;
+}
+
+.lock-block p:nth-child(3) {
+    font-size: 1.7rem;
+    padding-top: .1rem;
+}
+
+.lock {
+    width: 82px;
+    height: 82px;
+    background-position: -264px -32px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* calendar block */
+.calendar-block {
+    margin-right: 48px;
+}
+
+.calendar {
+    width: 82px;
+    height: 82px;
+    background-position: -376px -34px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.calendar-block p:nth-child(2) {
+    padding-top: .5rem;
+    font-size: .9rem;
+}
+
+.calendar-block p:nth-child(3) {
+    padding-top: .2rem;
+    font-size: 1.7rem;
+}
+
+/* percent block*/
+.percent-block p:nth-child(2) {
+    padding-top: .5rem;
+}
+
+.percent-block p:nth-child(3) {
+    padding-top: .1rem;
+    font-size: 1.62rem;
+}
+
+.percent {
+    width: 82px;
+    height: 82px;
+    background-position: -496px -28px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* aside text block*/
+aside {
+    width: 53%;
+    float: left;
+}
+
+aside p {
+    padding-top: 1rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+aside p:nth-child(1) {
+    line-height: 2.1rem;
+    padding-top: 5rem;
+}
+
+aside p:nth-child(2) {
+    line-height: 2.2rem;
+    padding-top: 2.3rem;
+}
+
+aside p:nth-child(3) {
+    line-height: 2.2rem;
+    padding-top: 2.3rem;
+}
+
+/*figure scheme*/
+figure {
+    margin-top: 2rem;
+    position: relative;
+    /*border: 1px solid red;*/
+    background: url(../images/sprite.png);
+    width: 600px;
+    height: 340px;
+    background-position: -21px -125px;
+}
+
+figure span {
+    position: absolute;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.register {
+    left: 26px;
+    top: 291px;
+}
+
+.select {
+    left: 158px;
+    top: 291px;
+}
+
+.receive {
+    left: 405px;
+    top: 291px;
+}
+
+.track {
+    left: 328px;
+    top: 155px;
+}
+
+form {
+    float: right;
+    color: #fff;
+    width: 355px;
+}
+
+form h3 {
+    padding-top: .45rem;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 2.3rem;
+    position: relative;
+}
+form h3 .form-invalid-message, form h3 .form-valid-message{
+    font-size:1.2rem;
+    position: absolute;
+    top: 1rem;
+    background: #ccc;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: red;
+    transition: all .5s;
+    opacity: 0;
+    z-index:-1;
+}
+form.check-fields h3 .form-invalid-message{
+    opacity: .9;
+    z-index:1;
+}
+form.check-fields.can-be-submitted h3 .form-valid-message{
+    color: green;
+    opacity: .9;
+    z-index:1;
+}
+form.check-fields.can-be-submitted h3 .form-message{
+    opacity: 0;
+    z-index:-1;
+}
+form input {
+    padding: .77rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border-radius: .7rem;
+    box-sizing: border-box;
+    color: #000;
+    margin-bottom: .62rem;
+    border: 1px solid #ccc;
+}
+
+form input[type="radio"] {
+    width: auto;
+}
+
+form input:focus, form input:active {
+    z-index: 2;
+    position: relative;
+}
+
+form label {
+    margin-left: .4rem;
+    position: relative;
+}
+
+form label input {
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-control > span {
+    position: absolute;
+    top: 1rem;
+    left: .5rem;
+    color: #bbb;
+    z-index: 1;
+}
+
+.form-control label {
+    display: block;
+}
+
+.form-control span.message {
+    display: none;
+    position: absolute;
+    top: 0.2rem;
+    color: #ff5a70;
+    font-size: .9rem;
+}
+
+input.ng-invalid.ng-dirty.ng-not-empty.ready-for-validation + .message, input.ng-dirty.ng-not-empty.not-equal + .message, input.ng-dirty.ng-not-empty.not-valid + .message, .check-fields input.not-valid + .message {
+    display: block;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: .7rem;
+    /*height:2rem;*/
+}
+
+.asterisk {
+    color: red;
+}
+
+span.placeholder-up {
+    top: 0;
+    position: relative;
+    color: #fff;
+}
+
+.placeholder-up + input + span {
+    top: 1.2rem!important;
+}
+
+form button {
+    padding: 1rem;
+    border-radius: 15px;
+    background: #ffd600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 8px solid #dcb00f;
+    transition: all .3s;
+}
+form button:hover{
+    background: #c4a000;
+}
+form button:active{
+    opacity:.8;
+}
+
+
+.placeholder-clicked {
+    z-index: -1 !important;
+}
+
+input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-not-empty.not-equal, input.my-invalid, input.ng-dirty.ng-not-empty.not-valid,  .check-fields input[required="required"].not-valid, .check-fields select.ng-invalid  {
+    border: 1px solid red;
+}
+.form-control select{
+    margin:.5rem 0;
+}
+/* radio buttons for accounts*/
+.radio-group{
+    margin-top:1.1rem;
+    font-size:1.15rem;
+    margin-bottom:1rem;
+}
+.radio-group .form-control{
+    float:left;
+    margin-right:.5rem;
+}
+.radio-group .form-control label{
+    display: inline;
+}
+.radio-group:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.form-control input[type="radio"]{
+    position: relative;
+    float: left;
+}
+.form-control input[type="radio"]:before{
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    content:'';
+    width: 0;
+    height: 0;
+    border: 14px solid #fff;
+    border-radius: 50px;
+    z-index:2;
+}
+.form-control input[type="radio"].selected:after{
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    content:'';
+    width: 0;
+    height: 0;
+    border: 10px solid #ffd600;
+    border-radius: 50px;
+    z-index:2;
+}
+.accept-block input[type="checkbox"]{
+    float: left;
+    width:auto;
+    position: relative;
+}
+
+.accept-block input[type="checkbox"]:before{
+    top: -2px;
+    left: -5px;
+    content:'';
+    position: absolute;
+    border: 12px solid #fff;
+    z-index: 2;
+}
+.accept-block input[type="checkbox"].selected:after{
+    top: 1px;
+    left: -2px;
+    content:'';
+    position: absolute;
+    border: 9px solid #ffd600;
+    z-index:3;
+}
+.accept-block label{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-left:2rem;
+    margin-bottom:.7rem;
+    border: 1px solid rgba(0,0,0,0);
+}
+.accept-block label.invalid{
+    border: 1px solid red;
+
+}

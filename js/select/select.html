@@ -1,0 +1,13 @@
+<div class="form-control">
+    <label for="{{$ctrl.fieldData.name}}">
+        {{$ctrl.fieldData.caption}}
+    </label>
+    <select name="{{$ctrl.fieldData.name}}"
+            id="{{$ctrl.fieldData.name}}"
+            ng-required="{{$ctrl.fieldData.required}}"
+            ng-options="item.caption for item in $ctrl.fieldData.options"
+            ng-model="$ctrl.fieldData.fieldValue"
+            ng-change="$ctrl.onChange(caption)"
+    >
+    </select>
+</div>
