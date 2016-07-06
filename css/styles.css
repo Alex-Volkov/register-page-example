@@ -455,7 +455,6 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
 .accept-block label{
     font-size: 1.2rem;
     line-height: 1.6rem;
-    /*margin-left:2rem;*/
     margin-bottom:.7rem;
     border: 1px solid rgba(0,0,0,0);
 }
