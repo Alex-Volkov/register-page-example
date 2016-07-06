@@ -10,6 +10,7 @@ textarea, input, button, select {
 html {
     font-family: Futura std, sans-serif;
     background-color: #51504e;
+    font-size: 14px;
 }
 
 .bg {
@@ -34,7 +35,7 @@ header {
     background-position: -738px -40px;
 }
 
-main {
+.main {
     width: 980px;
     /*border: 1px solid red;*/
     margin: 0 auto;
@@ -397,10 +398,14 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
     clear: both;
 }
 .form-control input[type="radio"]{
-    position: relative;
+    position: absolute;
     float: left;
+    left: -9999px;
 }
-.form-control input[type="radio"]:before{
+.form-control input[type="radio"] + label{
+    padding-left: 30px;
+}
+.form-control input[type="radio"] + label:before{
     position: absolute;
     left: -7px;
     top: -7px;
@@ -411,7 +416,7 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
     border-radius: 50px;
     z-index:2;
 }
-.form-control input[type="radio"].selected:after{
+.form-control input[type="radio"].selected + label:after{
     position: absolute;
     left: -3px;
     top: -3px;
@@ -420,15 +425,18 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
     height: 0;
     border: 10px solid #ffd600;
     border-radius: 50px;
-    z-index:2;
+    z-index:3;
 }
 .accept-block input[type="checkbox"]{
     float: left;
     width:auto;
-    position: relative;
+    position: absolute;
+    left: -9999px;
 }
-
-.accept-block input[type="checkbox"]:before{
+.accept-block input[type="checkbox"] + label{
+    padding-left: 30px;
+}
+.accept-block input[type="checkbox"] + label:before{
     top: -2px;
     left: -5px;
     content:'';
@@ -436,7 +444,7 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
     border: 12px solid #fff;
     z-index: 2;
 }
-.accept-block input[type="checkbox"].selected:after{
+.accept-block input[type="checkbox"].selected + label:after{
     top: 1px;
     left: -2px;
     content:'';
@@ -447,7 +455,7 @@ input.ng-dirty.ng-invalid.ng-not-empty.ready-for-validation, input.ng-dirty.ng-n
 .accept-block label{
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin-left:2rem;
+    /*margin-left:2rem;*/
     margin-bottom:.7rem;
     border: 1px solid rgba(0,0,0,0);
 }
